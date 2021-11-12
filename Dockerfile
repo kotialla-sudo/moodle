@@ -51,9 +51,9 @@ RUN yum -y module enable php:$PHP_VERSION && \
     rpm -V $INSTALL_PKGS && \
     yum -y clean all --enablerepo='*'
 RUN yum install php-pecl-zip
-RUN apachectl restart
 RUN docker-php-ext-install zip
 RUN dnf install php-xmlrpc
+RUN apachectl restart
 ENV PHP_CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/php/ \
     APP_DATA=${APP_ROOT}/src \
     PHP_DEFAULT_INCLUDE_PATH=/usr/share/pear \

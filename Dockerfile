@@ -50,6 +50,7 @@ RUN yum -y module enable php:$PHP_VERSION && \
     yum reinstall -y tzdata && \
     rpm -V $INSTALL_PKGS && \
     yum -y clean all --enablerepo='*'
+RUN docker-php-ext-install zip
 RUN dnf install php-xmlrpc
 ENV PHP_CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/php/ \
     APP_DATA=${APP_ROOT}/src \

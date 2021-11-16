@@ -1,4 +1,4 @@
-FROM ubi8/s2i-base:rhel8.4
+FROM php:7.4-apache
 
 # This image provides an Apache+PHP environment for running PHP
 # applications.

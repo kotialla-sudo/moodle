@@ -44,7 +44,7 @@ LABEL summary="${SUMMARY}" \
 RUN yum -y module enable php:$PHP_VERSION && \
     INSTALL_PKGS="php php-zip php-xmlrpc php-mysqlnd php-pgsql php-bcmath \
                   php-gd php-intl php-json php-ldap php-mbstring php-pdo \
-                  php-process php-soap php-opcache php-xml \
+                  php-process php-soap php-opcache php-xml php-imap \
                   php-gmp php-pecl-apcu mod_ssl hostname" && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
     yum reinstall -y tzdata && \

@@ -15,7 +15,7 @@ ENV PHP_VERSION=7.4 \
     PHP_VER_SHORT=74 \
     NAME=php
 
-# ENV SUMMARY="Platform for building and running PHP $PHP_VERSION applications" \
+ENV SUMMARY="Platform for building and running PHP $PHP_VERSION applications" \
     DESCRIPTION="PHP $PHP_VERSION available as container is a base platform for \
 building and running various PHP $PHP_VERSION applications and frameworks. \
 PHP is an HTML-embedded scripting language. PHP attempts to make it easy for developers \
@@ -24,7 +24,7 @@ for several commercial and non-commercial database management systems, so writin
 a database-enabled webpage with PHP is fairly simple. The most common use of PHP coding \
 is probably as a replacement for CGI scripts."
 
-# LABEL summary="${SUMMARY}" \
+LABEL summary="${SUMMARY}" \
       description="${DESCRIPTION}" \
       io.k8s.description="${DESCRIPTION}" \
       io.k8s.display-name="Apache 2.4 with PHP ${PHP_VERSION}" \
